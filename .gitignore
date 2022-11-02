@@ -1,0 +1,4 @@
+apps/
+browser/
+.tool-versions
+web/tests/logs/
