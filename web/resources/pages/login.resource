@@ -6,14 +6,14 @@ Library     Browser
 
 *** Keywords ***
 Go To Login Page
-    New Browser    headless=false    browser=webkit
+    New Browser    headless=false    browser=chromium
     New Page    http://localhost:3000
 
 Fill Credentials
     [Arguments]    ${email}    ${pass}
 
-    Fill Text    css=input[name="email"]    ${email}
-    Fill Text    css=input[name="password"]    ${pass}
+    Fill Text      css=input[name="email"]    ${email}
+    Fill Text      css=input[name="password"]    ${pass}
 
 Field Type Should Be email
     Get Attribute    css=input[placeholder="Seu e-mail"]
