@@ -1,15 +1,16 @@
 *** Settings ***
-Documentation       Representação do elemento toaster
+Documentation                Representação do elemento toaster
 
-Library             Browser
-
+Library                      Browser
 
 *** Keywords ***
 Verify Toaster
-    [Arguments]    ${expected_message}
+    [Arguments]              ${expected_message}
+
     Wait For Elements State
-    ...    css=.Toastify__toast-body div >> text=${expected_message}
-    ...    visible    5
+    ...                      css=.Toastify__toast-body div >> text=${expected_message}
+    ...                      visible    5
+
     Wait For Elements State
-    ...    css=.Toastify__toast-body div
-    ...    detached    10
+    ...                      css=.Toastify__toast-body div
+    ...                      detached    10
