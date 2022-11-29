@@ -15,8 +15,13 @@ Deve matricular um aluno
     ${enroll}                Create Dictionary
     ...                      student=Falcão não mexer
     ...                      plan=Smart
+    
+    Connect To Postgres
+    Delete Enroll By Email    falcao@gmail.com
+    Disconnect From Database
 
     Do Login                 ${admin}
+    
     Go To Enrolls
     Go To Enroll Form
     Fill Enroll Student      ${enroll}[student]

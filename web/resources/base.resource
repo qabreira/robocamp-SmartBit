@@ -5,6 +5,7 @@ Resource                     ./components/navbar.resource
 Resource                     ./components/toast.resource
 Resource                     ./pages/enroll.resource
 Resource                     ./pages/login.resource
+Resource                     ./database.resource
 
 *** Keywords ***
 # Helpers
