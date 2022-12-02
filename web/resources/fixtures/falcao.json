@@ -1,0 +1,12 @@
+{
+    "student": {
+        "age": 24,
+        "email": "falcao@yahoo.com",
+        "feet_tall": 170,
+        "name": "Falcão dos Santos",
+        "weight": 75
+    },
+    "enroll": {
+        "plan": "Smart"
+    }
+}

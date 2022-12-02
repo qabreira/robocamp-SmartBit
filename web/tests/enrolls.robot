@@ -4,28 +4,33 @@ Documentation                Suite de testes de matrículas de alunos
 
 Resource                     ../resources/base.resource
 
+
 *** Test Cases ***
+Cria um aluno via POST
+    [Tags]    api
+    ${admin}      Get Fixture    admin
+    ${falcao}     Get Fixture    falcao
+
+    Reset Student    ${falcao}[student][email]
+    
+    ${token}      Get Service Token    ${admin}
+    POST New Student    ${token}       ${falcao}[student]
+
 Deve matricular um aluno
-    
-    ${admin}                 Create Dictionary
-    ...                      name=Admin
-    ...                      email=admin@smartbit.com
-    ...                      pass=qacademy
+    ${admin}      Get Fixture    admin
+    ${falcao}     Get Fixture    falcao
 
-    ${enroll}                Create Dictionary
-    ...                      student=Falcão não mexer
-    ...                      plan=Smart
-    
-    Connect To Postgres
-    Delete Enroll By Email    falcao@gmail.com
-    Disconnect From Database
+    Reset Student    ${falcao}[student][email]
 
-    Do Login                 ${admin}
+    ${token}      Get Service Token    ${admin}
+    POST New Student    ${token}       ${falcao}[student]
+
+    Do Login                 &{admin}
     
     Go To Enrolls
     Go To Enroll Form
-    Fill Enroll Student      ${enroll}[student]
-    Fill Enroll Plan         ${enroll}[plan]
+    Fill Enroll Student      ${falcao}[student][name]
+    Fill Enroll Plan         ${falcao}[enroll][plan]
     Fill Enroll Start Date
     Submit Enroll Form    
 
