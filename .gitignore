@@ -3,3 +3,4 @@ browser/
 .tool-versions
 web/tests/logs/
 web/resources/pages/libs/__pycache__
+mobile/logs
