@@ -3,6 +3,7 @@ Documentation                O início de tudo
 
 Resource                     ./components/navbar.resource
 Resource                     ./components/toast.resource
+Resource                     ./components/notifications.resource
 Resource                     ./pages/enroll.resource
 Resource                     ./pages/login.resource
 Resource                     ./database.resource

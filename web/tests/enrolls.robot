@@ -4,10 +4,9 @@ Documentation                Suite de testes de matrículas de alunos
 
 Resource                     ../resources/base.resource
 
-
 *** Test Cases ***
 Cria um aluno via POST
-    [Tags]    api
+
     ${admin}      Get Fixture    admin
     ${falcao}     Get Fixture    falcao
 
@@ -17,6 +16,7 @@ Cria um aluno via POST
     POST New Student    ${token}       ${falcao}[student]
 
 Deve matricular um aluno
+
     ${admin}      Get Fixture    admin
     ${falcao}     Get Fixture    falcao
 

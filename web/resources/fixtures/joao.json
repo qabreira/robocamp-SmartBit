@@ -1,0 +1,13 @@
+{
+    "student": {
+        "age": 24,
+        "email": "joao@bol.com",
+        "feet_tall": 170,
+        "name": "João do Pé de Feijão",
+        "weight": 75
+    },
+    "enroll": {
+        "plan": "Smart"
+    },
+    "question": "Como posso perder peso?"
+}

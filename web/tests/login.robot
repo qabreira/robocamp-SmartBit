@@ -4,6 +4,14 @@ Documentation                Suite de testes de autenticação
 
 Resource                     ../resources/base.resource
 
+# Suite Setup                  Log    Executado uma única vez antes de todos os testes
+# Suite Teardown               Log    Executado uma única vez depois de todos os testes
+
+# Test Setup                   Log    Executado sempre antes de cada teste
+# Test Teardown                Log    Executado sempre depois de cada teste
+
+Test Teardown    Take Screenshot
+
 
 *** Test Cases ***
 Login do Administrador
@@ -40,10 +48,10 @@ E-mail em branco
     Go To Login Page
     Fill Credentials            ${EMPTY}    qacademy
     Submit Credentials
-    Alert Text Should Be        email    O e-mail é obrigatório
+    Alert Text Should Be        email       O e-mail é obrigatório
 
 E-mail e senha são obrigatórios
     Go To Login Page
     Submit Credentials
-    Alert Text Should Be        email    O e-mail é obrigatório
+    Alert Text Should Be        email       O e-mail é obrigatório
     Alert Text Should Be        password    A senha é obrigatória

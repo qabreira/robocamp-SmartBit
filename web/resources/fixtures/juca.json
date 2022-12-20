@@ -1,0 +1,14 @@
+{
+    "student": {
+        "age": 30,
+        "email": "juquinha@ig.com",
+        "feet_tall": 180,
+        "name": "Juca Oliveira",
+        "weight": 80
+    },
+    "enroll": {
+        "plan": "Smart"
+    },
+    "question": "Quais exercícios devo fazer?",
+    "answer": "Olá, faça 20 abdominais e 10 flexões. Repita 3 vezes. Bom treino!"
+}

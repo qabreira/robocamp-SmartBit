@@ -8,8 +8,8 @@ Connect To Postgres
     Connect To Database    psycopg2
     ...                    mdbtfsit
     ...                    mdbtfsit
-    ...                    wAJhsrbTx5yiSFEWqmnS5Z1CLQv71gru
-    ...                    babar.db.elephantsql.com 
+    ...                    thwTFRI1bHE8m22jLS73hRfzBFA-gscR
+    ...                    babar.db.elephantsql.com
     ...                    5432
 
 # SELECT * FROM public.students WHERE email = 'falcao@gmail.com';
@@ -45,11 +45,33 @@ Delete Student By Email
     Execute Sql String    ${query}
 
 
+Delete Help Orders Without Answer
+    
+    ${query}       Set Variable
+    ...            DELETE FROM "public"."help_orders";
+
+    Execute Sql String    ${query}
+
+    
+
+
 # Helpers
 
 Reset Student
     [Arguments]    ${email}
     
     Connect To Postgres
+
     Delete Student By Email    ${email}
     Disconnect From Database
+    Sleep    10
+
+Clear Help and Reset Student
+
+    [Arguments]    ${email}
+
+    Connect To Postgres
+    Delete Help Orders Without Answer
+    Delete Student By Email    ${email}
+    Disconnect From Database
+    Sleep    10
